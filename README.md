@@ -85,6 +85,7 @@ npm start [fileKey]
 npm start https://www.figma.com/file/abc123xyz/Design-Name
 ```
 
+The system extracts the file key from URLs and the output is saved to `./output folder
 
 ## Project Structure
 
