@@ -35,25 +35,24 @@ The system operates in three phases:
 
 ### Layout Conversion 
 
+**Flexbox Containers**: When an element uses flexbox layout, the system creates flexbox CSS. It checks the sizing settings to decide whether sizes should be fixed pixels or automatic. Elements inside flex containers flow naturally without needing exact positions.
 
-**Flexbox Containers**: When a node has `layoutMode` set, it generates flexbox CSS. The system detects `primaryAxisSizingMode` and `counterAxisSizingMode` to determine whether dimensions should be fixed pixels or auto-sized. Children within flex containers flow naturally without explicit positioning.
-
-**Absolute Positioning**: For non-flex containers, the system calculates offsets by subtracting parent bounding box coordinates from child coordinates. This prevents layout drift that occurs when using large margin values. Root-level containers use relative positioning to establish a positioning context.
+**Absolute Positioning**: For elements that don't use flexbox, the system figures out positions by subtracting parent element coordinates from child element coordinates. This prevents elements from moving to wrong places that happens when using large margin values. Top-level containers use relative positioning to create a reference point for positioning.
 
 ### Color and Gradient Handling
 
-Figma uses a 0-1 normalized color space. The conversion multiplies values by 255 and rounds to integers. For gradients, the system:
-- Extracts gradient stops and converts positions (0-1) to percentages
-- Calculates linear gradient angles from `gradientHandlePositions` using atan2
-- Maps gradient types to appropriate CSS functions (linear-gradient, radial-gradient, conic-gradient)
+Figma uses colors stored as numbers between 0 and 1. The conversion multiplies these by 255 and rounds to whole numbers. For gradients, the system:
+- Gets gradient points and converts their positions (0-1) to percentages
+- Calculates linear gradient angles from gradient handle positions using math functions
+- Maps gradient types to the right CSS functions (linear-gradient, radial-gradient, conic-gradient)
 
 ### Typography Conversion
 
-Text nodes require special handling because Figma stores text properties separately from fills. The system:
-- Applies fills as `color` (not `background`) for text nodes
-- Converts `lineHeightPx` and `lineHeightPercent` appropriately
-- Handles letter-spacing in both PIXELS and PERCENT units
-- Detects single-line text by comparing line-height to font-size ratio and applies `white-space: nowrap`
+Text elements need special handling because Figma stores text properties separately from colors. The system:
+- Applies colors as text color (not background) for text elements
+- Converts line height values whether they're in pixels or percentages
+- Handles letter-spacing in both pixel and percentage units
+- Detects single-line text by comparing line-height to font-size and prevents text wrapping
 
 ### Input Field Detection
 

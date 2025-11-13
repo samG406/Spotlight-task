@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Softlight Engineering Take-Home Assignment (Copy)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .page {
+      position: relative;
+      width: auto;
+      max-width: 393px;
+      overflow: hidden;
+    }
+    .figma-1-111 {
+      position: absolute;
+      left: 127.00000000000011px;
+      top: 8px;
+      width: 139px;
+      height: 5px;
+      background: rgb(44, 25, 77);
+      border-radius: 100px;
+    }
+
+    .figma-1-110 {
+      position: absolute;
+      width: 393px;
+      min-height: 21px;
+      left: 0px;
+      top: 831px;
+    }
+
+    .figma-1-112 {
+      position: absolute;
+      left: 32.000000000000114px;
+      top: 170px;
+      width: 154px;
+      height: 58px;
+      font-family: "Inter", sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      text-align: left;
+      white-space: nowrap;
+      line-height: 57.60000228881836px;
+      color: rgb(54, 51, 65);
+    }
+
+    .figma-1-115 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      width: 329px;
+      min-height: 58px;
+      padding: 20px 16px 20px 16px;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: left;
+      white-space: nowrap;
+      line-height: 18px;
+      color: rgb(54, 51, 65);
+      border: 1px solid rgb(215, 215, 215);
+    }
+
+    .figma-1-117 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      width: 329px;
+      min-height: 59px;
+      padding: 20px 16px 20px 16px;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: left;
+      white-space: nowrap;
+      line-height: 18px;
+      color: rgb(192, 192, 192);
+      border: 1px solid rgb(215, 215, 215);
+    }
+
+    .figma-1-114 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      position: absolute;
+      width: 329px;
+      min-height: 117px;
+      left: 32.000000000000114px;
+      top: 252px;
+    }
+
+    .figma-1-123 {
+      position: relative;
+      width: 49px;
+      height: 22px;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+      line-height: 22px;
+      color: rgb(255, 255, 255);
+    }
+
+    .figma-1-120 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      position: absolute;
+      width: 361px;
+      min-height: 46px;
+      left: 16.000000000000114px;
+      top: 662px;
+      overflow: hidden;
+      background: linear-gradient(-21deg, rgb(149, 34, 140) 0%, rgb(58, 60, 179) 100%);
+      border-radius: 62px;
+      backdrop-filter: blur(10px);
+    }
+
+    .figma-1-126 {
+      position: relative;
+      width: 110px;
+      height: 22px;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+      line-height: 22px;
+      color: rgb(54, 51, 65);
+    }
+
+    .figma-1-125 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      position: absolute;
+      width: 361px;
+      min-height: 46px;
+      left: 16.000000000000114px;
+      top: 720px;
+      overflow: hidden;
+      background: rgb(225, 224, 230);
+      border-radius: 62px;
+      backdrop-filter: blur(10px);
+    }
+
+    .figma-1-127 {
+      position: absolute;
+      left: 16.000000000000114px;
+      top: 778px;
+      width: 361px;
+      height: 37px;
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      white-space: nowrap;
+      line-height: 15.600000381469727px;
+      color: rgba(54, 51, 65, 0.800000011920929);
+    }
+
+    .figma-1-75 {
+      position: relative;
+      width: 393px;
+      min-height: 852px;
+      overflow: hidden;
+      background: rgb(250, 250, 250);
+      border-radius: 32px;
+    }
+
+    .figma-0-1 {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="figma-0-1 sign-in-screen page">
+    <div class="figma-1-75 frame">
+      <div class="figma-1-110 home-indicator">
+        <div class="figma-1-111 home-indicator"></div>
+      </div>
+      <p class="figma-1-112 headline">Sign in</p>
+      <div class="figma-1-114 frame-1321318736">
+        <input class="figma-1-115 frame-1321318734" type="text" placeholder="andy@gmail.com"></input>
+        <input class="figma-1-117 frame-1321318735" type="text" placeholder="Password"></input>
+      </div>
+      <div class="figma-1-120 frame">
+        <p class="figma-1-123 label-text">Sign in</p>
+      </div>
+      <div class="figma-1-125 frame">
+        <p class="figma-1-126 label-text">Create account</p>
+      </div>
+      <p class="figma-1-127 headline">Forgot password</p>
+    </div>
+  </div>
+</body>
+</html>
